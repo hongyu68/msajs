@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>MSA - Animate on scroll library</title>
+        <meta name="viewport" content="width=device-width" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <link rel="stylesheet" type="text/css" href="dist/msa.css" />
+        <style>
+            :root {
+                --distance: 2000px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="js-scroll-counter scroll-counter"></div>
+        <div class="msa-all">
+            <div
+                data-id="1"
+                class="msa-item"
+                data-msa="fade-up"
+                data-msa-delay="100"
+            ></div>
+            <div
+                data-id="2"
+                class="msa-item"
+                data-msa="fade-down"
+                data-msa-delay="200"
+            ></div>
+            <div
+                data-id="3"
+                class="msa-item"
+                data-msa="zoom-out-down"
+                data-msa-delay="300"
+            ></div>
+            <div
+                data-id="4"
+                class="msa-item"
+                data-msa="flip-down"
+                data-msa-delay="400"
+                data-msa-easing="ease-in-cubic"
+            ></div>
+            <div
+                data-id="5"
+                class="msa-item"
+                data-msa="flip-up"
+                data-msa-delay="500"
+            ></div>
+            <div
+                data-id="6"
+                class="msa-item"
+                data-msa="fade-down"
+                data-msa-delay="600"
+                data-msa-duration="800"
+            ></div>
+            <div data-id="7" class="msa-item" data-msa="fade-up"></div>
+            <div data-id="8" class="msa-item" data-msa="fade-down"></div>
+            <div data-id="9" class="msa-item" data-msa="fade-up"></div>
+            <div
+                data-id="10"
+                class="msa-item"
+                data-msa="fade-down"
+                data-msa-id="super-duper"
+                dat-msa-easing="ease-in-out-back"
+                data-msa-delay="300"
+            ></div>
+            <div data-id="11" class="msa-item" data-msa="fade-up"></div>
+            <div data-id="12" class="msa-item" data-msa="fade-down"></div>
+            <div data-id="13" class="msa-item" data-msa="fade-in"></div>
+            <div data-id="14" class="msa-item" data-msa="fade-up"></div>
+            <div data-id="15" class="msa-item" data-msa="fade-in"></div>
+            <div data-id="16" class="msa-item" data-msa="fade-up"></div>
+            <div data-id="17" class="msa-item" data-msa="fade-down"></div>
+            <div data-id="18" class="msa-item" data-msa="fade-up"></div>
+            <div data-id="19" class="msa-item" data-msa="zoom-out"></div>
+            <div data-id="20" class="msa-item" data-msa="fade-up"></div>
+            <div data-id="21" class="msa-item" data-msa="fade-down-right"></div>
+            <div data-id="22" class="msa-item" data-msa="fade-up-right"></div>
+            <div data-id="23" class="msa-item" data-msa="zoom-out-up"></div>
+            <div data-id="24" class="msa-item" data-msa="zoom-out-down"></div>
+        </div>
+
+        <script src="dist/msa.js"></script>
+        <script>
+            const scrollCounter = document.querySelector(".js-scroll-counter");
+
+            MSA.init({
+                offset: 0,
+                delay: 300,
+                easing: "ease-in-out-quad",
+            });
+
+            window.addEventListener("scroll", function () {
+                scrollCounter.innerHTML = window.scrollY;
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,145 @@
+body {
+    font-family: Helvetica, Tahoma;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+.scroll-counter {
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 15px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.msa-all {
+    width: 1000px;
+    max-width: 98%;
+    margin: 50px auto;
+}
+
+.msa-item {
+    float: left;
+    width: 100%;
+    height: 300px;
+    padding: 20px;
+}
+
+.msa-item::before {
+    content: attr(data-id);
+    position: relative;
+    width: 100%;
+    height: 100%;
+    float: left;
+    background: #ff6700;
+    line-height: 260px;
+    text-align: center;
+    color: #fff;
+}
+
+@media screen and (min-width: 420px) {
+    .msa-item {
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .msa-item {
+        width: 33%;
+    }
+}
+
+.msa-anchors__lines {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-top: 2px solid blue;
+    border-bottom: 2px solid red;
+}
+
+.msa-anchors__lines::before {
+    content: "";
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: green;
+}
+
+.msa-anchors__sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+.msa-anchors__sidebar > div {
+    padding: 5px 10px;
+    background: #f1f1f1;
+}
+
+.msa-anchors__content {
+    width: 400px;
+    margin: 50px auto;
+}
+
+.msa-anchors__content > div {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    margin-bottom: 50px;
+    background: #f1f1f1;
+    line-height: 300px;
+    text-align: center;
+    color: #333;
+}
+
+.msa-anchors__content > div::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+}
+
+.msa-anchors__content > div::after {
+    content: attr(data-anchor-id);
+    position: relative;
+    background-color: #f1f1f1;
+}
+
+.msa-anchors__content > div[data-placement$="-bottom"]::before {
+    background-color: red;
+}
+
+.msa-anchors__content > div[data-placement$="-center"]::before {
+    background-color: green;
+}
+
+.msa-anchors__content > div[data-placement$="-top"]::before {
+    background-color: blue;
+}
+
+.msa-anchors__content > div[data-placement^="top-"]::before {
+    top: 0;
+}
+
+.msa-anchors__content > div[data-placement^="center-"]::before {
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.msa-anchors__content > div[data-placement^="bottom-"]::before {
+    bottom: 0;
+}

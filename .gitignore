@@ -1,0 +1,27 @@
+
+# OS or Editor folders
+._*
+.cache
+.DS_Store
+.idea
+.project
+nbproject
+Thumbs.db
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.history*
+
+# Folders to ignore
+yarn.lock
+package-lock.json
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+node_modules
+
+# Dev files to ignore
+dist

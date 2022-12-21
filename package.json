@@ -1,0 +1,47 @@
+{
+    "name": "msajs",
+    "version": "1.3.2",
+    "description": "Animate on scroll library",
+    "homepage": "",
+    "author": "",
+    "license": "",
+    "main": "dist/msa.cjs.js",
+    "module": "dist/msa.esm.js",
+    "browser": "dist/msa.js",
+    "devDependencies": {
+        "@babel/core": "^7.17.9",
+        "@babel/plugin-proposal-optional-chaining": "^7.16.7",
+        "@babel/preset-env": "^7.16.11",
+        "autoprefixer": "^10.4.4",
+        "babel-eslint": "^10.1.0",
+        "cssnano": "^5.1.7",
+        "eslint": "^8.13.0",
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-plugin-prettier": "^4.0.0",
+        "live-server": "^1.2.1",
+        "node-sass": "^7.0.1",
+        "postcss": "^8.4.12",
+        "rollup": "^2.70.2",
+        "rollup-plugin-babel": "^4.4.0",
+        "rollup-plugin-commonjs": "^10.1.0",
+        "rollup-plugin-node-resolve": "^5.2.0",
+        "rollup-plugin-postcss": "^4.0.2",
+        "rollup-plugin-serve": "^1.1.0",
+        "rollup-plugin-terser": "^7.0.2",
+        "rollup-plugin-uglify": "^6.0.4"
+    },
+    "dependencies": {
+        "lodash.debounce": "^4.0.8",
+        "lodash.throttle": "^4.1.1"
+    },
+    "scripts": {
+        "build": "NODE_ENV=production rollup -c",
+        "watch": "NODE_ENV=dev rollup -c -w",
+        "serve": "node ./scripts/server.js",
+        "dev": "node ./scripts/server.js"
+    },
+    "files": [
+        "dist",
+        "src"
+    ]
+}
